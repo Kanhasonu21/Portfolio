@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Tooltip } from 'react-bootstrap';
 import myImg from '../../Assets/avatar.svg';
+import profile from '../../Assets/profile.jpeg';
 import Tilt from 'react-parallax-tilt';
 import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
@@ -45,8 +46,21 @@ function Home2() {
             </p>
           </Col>
           <Col md={4} className='myAvtar'>
-            <Tilt>
-              <img src={myImg} className='img-fluid' alt='avatar' />
+            <Tilt
+              className='tilt-img'
+              tiltMaxAngleX={35}
+              tiltMaxAngleY={35}
+              perspective={900}
+              scale={1.1}
+              transitionSpeed={2000}
+              gyroscope={true}
+            >
+              <img
+                src={profile}
+                className='rounded-circle shadow-4'
+                style={{ width: '80%', border: '2px solid #c770f0' }}
+                alt='avatar'
+              />
             </Tilt>
           </Col>
         </Row>

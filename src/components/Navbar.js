@@ -41,10 +41,10 @@ function NavBar() {
         <Navbar.Brand href='/'>
           <img
             src={profile}
-            class='rounded-circle shadow-4'
+            className='rounded-circle shadow-4 logo'
             style={{ width: '50px' }}
             alt='Avatar'
-          />{' '}
+          />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls='responsive-navbar-nav'
