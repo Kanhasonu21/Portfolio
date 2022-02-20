@@ -1,12 +1,12 @@
-import { Container, Row, Col, Tooltip, Form, Button } from 'react-bootstrap';
-import myImg from '../../Assets/avatar.svg';
-import profile from '../../Assets/profile.jpeg';
-import Tilt from 'react-parallax-tilt';
-import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { SiBlogger } from 'react-icons/si';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+
+import profile from '../../Assets/profile.jpeg';
+import Tilt from 'react-parallax-tilt';
+import { database } from '../../config/firebase';
+import { collection,  addDoc } from 'firebase/firestore';
 const schema = Yup.object().shape({
   name: Yup.string()
     .min(3, 'Too Short!')
@@ -16,6 +16,7 @@ const schema = Yup.object().shape({
   message: Yup.string().required('Required'),
 });
 function Home2() {
+  const collectionRef = collection(database, 'portfolio-contact');
   return (
     <Container fluid className='home-about-section' id='about'>
       <Container>
@@ -77,8 +78,11 @@ function Home2() {
             <h1>Get in Touch</h1>
             <Formik
               validationSchema={schema}
-              onSubmit={(values, actions) => {
-                console.log(values);
+              onSubmit={async (values, actions) => {
+                try {
+                   await addDoc(collectionRef, values);
+                  actions.resetForm();
+                } catch (err) {}
               }}
               initialValues={{
                 name: '',
