@@ -31,7 +31,11 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img src={homeLogo} alt='home pic' className='img-fluid' />
+              <img
+                src={homeLogo}
+                alt='home pic'
+                className='img-fluid image bounce-1'
+              />
             </Col>
           </Row>
         </Container>

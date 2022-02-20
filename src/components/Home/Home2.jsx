@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Row, Col, Tooltip } from 'react-bootstrap';
 import myImg from '../../Assets/avatar.svg';
 import profile from '../../Assets/profile.jpeg';
