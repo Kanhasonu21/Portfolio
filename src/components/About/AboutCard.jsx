@@ -31,10 +31,12 @@ function AboutCard() {
               <ImPointRight /> Watching TV Series
             </li>
           </ul>
-
           <p style={{ marginBlockEnd: 0, color: 'rgb(155 126 172)' }}>
-            "Strive to build things that make a difference!"{' '}
+            "People work better when they know what the goal is and why. It is
+            important that people look forward to coming to work in the morning
+            and enjoy working."
           </p>
+          <i>-Elon Musk</i>
         </blockquote>
       </Card.Body>
     </Card>

@@ -12,22 +12,22 @@ function Toolstack() {
   return (
     <Row style={{ justifyContent: 'center', paddingBottom: '50px' }}>
       <Col xs={4} md={2} className='tech-icons'>
-        <SiVisualstudiocode />
+        <SiVisualstudiocode className='techicons-img' />
       </Col>
       <Col xs={4} md={2} className='tech-icons'>
-        <SiLinux />
+        <SiLinux className='techicons-img' />
       </Col>
       <Col xs={4} md={2} className='tech-icons'>
-        <SiPostman />
+        <SiPostman className='techicons-img' />
       </Col>
       <Col xs={4} md={2} className='tech-icons'>
-        <SiNetlify />
+        <SiNetlify className='techicons-img' />
       </Col>
       <Col xs={4} md={2} className='tech-icons'>
-        <FaSpotify />
+        <FaSpotify className='techicons-img' />
       </Col>
       <Col xs={4} md={2} className='tech-icons'>
-        <FaYoutube />
+        <FaYoutube className='techicons-img' />
       </Col>
     </Row>
   );

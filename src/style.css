@@ -154,6 +154,7 @@ html {
 
 .logo {
   border: 2px solid var(--imp-text-color);
+  animation: rotate 5s infinite ease-in-out;
 }
 
 .navbar-nav .nav-link {
@@ -357,12 +358,47 @@ html {
     transform: translateY(0);
   }
 }
+.form-control {
+  background: transparent !important;
+  color: #fff !important ;
+  outline: none;
+  border: 1px solid var(--imp-text-color) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  fill: none !important;
+}
+.form-control:focus {
+  border: 1px solid var(--imp-border-color) !important;
+}
+.techicons-img {
+  animation: bounce-2 3s infinite linear;
+  -webkit-animation: bounce-2 2s infinite linear;
+}
+
+@keyframes bounce-2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;
   color: white !important;
 }
-
 .home-about-social-links {
   justify-content: center !important;
   padding-top: 15px !important;
@@ -429,11 +465,11 @@ html {
   padding-bottom: 8px !important ;
 }
 .footer-copywright {
-  text-align: center !important;
+  text-align: left !important;
 }
 
 .footer-body {
-  text-align: center !important;
+  text-align: right !important;
 }
 
 @media (max-width: 767px) {

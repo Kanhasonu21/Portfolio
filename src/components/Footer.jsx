@@ -6,6 +6,7 @@ import {
   AiFillInstagram,
 } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
+import { SiBlogger } from 'react-icons/si';
 
 function Footer() {
   let date = new Date();
@@ -13,56 +14,56 @@ function Footer() {
   return (
     <Container fluid className='footer'>
       <Row>
-        <Col md='12' className='footer-copywright'>
-          <h3>Designed and Developed by Kanhaiya Kumar</h3>
+        <Col md='6' className='footer-copywright'>
+          <h3>Made with 💛 &nbsp; by Kanhaiya</h3>
         </Col>
         {/* <Col md='4' className='footer-copywright'>
           <h3>Copyright © {year} KK</h3>
         </Col> */}
-        {/* <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
+        <Col md='6' className='footer-body'>
+          <ul className='footer-icons'>
+            <li className='social-icons'>
               <a
-                href=""
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
+                href='https://github.com/kanhasonu21'
+                style={{ color: 'white' }}
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">
+            <li className='social-icons'>
               <a
-                href="https://twitter.com/Soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
+                href='https://twitter.com/kanhaiya__k'
+                style={{ color: 'white' }}
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <AiOutlineTwitter />
               </a>
             </li>
-            <li className="social-icons">
+            <li className='social-icons'>
               <a
-                href=""
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
+                href='https://www.linkedin.com/in/kanhasonu21/'
+                style={{ color: 'white' }}
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <FaLinkedinIn />
               </a>
             </li>
-            <li className="social-icons">
+            <li className='social-icons'>
               <a
-                href=""
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
+                href='https://hashnode.com/@kanhasonu21'
+                style={{ color: 'white' }}
+                target='_blank'
+                rel='noopener noreferrer'
               >
-                <AiFillInstagram />
+                <SiBlogger />
               </a>
             </li>
           </ul>
-        </Col> */}
+        </Col>
       </Row>
     </Container>
   );

@@ -1,11 +1,20 @@
-import { Container, Row, Col, Tooltip } from 'react-bootstrap';
+import { Container, Row, Col, Tooltip, Form, Button } from 'react-bootstrap';
 import myImg from '../../Assets/avatar.svg';
 import profile from '../../Assets/profile.jpeg';
 import Tilt from 'react-parallax-tilt';
 import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { SiBlogger } from 'react-icons/si';
-
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+const schema = Yup.object().shape({
+  name: Yup.string()
+    .min(3, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+  message: Yup.string().required('Required'),
+});
 function Home2() {
   return (
     <Container fluid className='home-about-section' id='about'>
@@ -65,52 +74,82 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className='home-about-social'>
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className='purple'>connect </span>with me
-            </p>
-            <ul className='home-about-social-links'>
-              <li className='social-icons'>
-                <a
-                  href='https://github.com/kanhasonu21'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='icon-colour  home-social-icons'
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className='social-icons'>
-                <a
-                  href='https://twitter.com/kanhaiya__k'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='icon-colour  home-social-icons'
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className='social-icons'>
-                <a
-                  href='https://www.linkedin.com/in/kanhasonu21/'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='icon-colour  home-social-icons'
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className='social-icons'>
-                <a
-                  href='https://hashnode.com/@kanhasonu21'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='icon-colour home-social-icons'
-                >
-                  <SiBlogger />
-                </a>
-              </li>
-            </ul>
+            <h1>Get in Touch</h1>
+            <Formik
+              validationSchema={schema}
+              onSubmit={(values, actions) => {
+                console.log(values);
+              }}
+              initialValues={{
+                name: '',
+                email: '',
+                message: '',
+              }}
+            >
+              {({
+                handleSubmit,
+                handleChange,
+                handleBlur,
+                values,
+                touched,
+                isValid,
+                errors,
+              }) => (
+                <Form className='contact' onSubmit={handleSubmit}>
+                  <Row className='mb-3'>
+                    <Form.Group as={Col}>
+                      <Form.Label>Name</Form.Label>
+                      <Form.Control
+                        type='text'
+                        name='name'
+                        placeholder='Enter Name'
+                        value={values.name}
+                        onChange={handleChange}
+                        isInvalid={!!errors.name}
+                      />
+                      <Form.Control.Feedback type='invalid'>
+                        {errors.name}
+                      </Form.Control.Feedback>
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId='formGridPassword'>
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control
+                        type='input'
+                        name='email'
+                        placeholder='Enter email'
+                        value={values.email}
+                        onChange={handleChange}
+                        isInvalid={!!errors.email}
+                      />
+                      <Form.Control.Feedback type='invalid'>
+                        {errors.email}
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  </Row>
+
+                  <Form.Group className='mb-3' controlId='formGridAddress1'>
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control
+                      placeholder='Write a message'
+                      as='textarea'
+                      style={{ height: '10rem' }}
+                      value={values.message}
+                      onChange={handleChange}
+                      name='message'
+                      isInvalid={!!errors.message}
+                    />
+                    <Form.Control.Feedback type='invalid'>
+                      {errors.message}
+                    </Form.Control.Feedback>
+                  </Form.Group>
+
+                  <Button variant='primary' type='submit'>
+                    Submit
+                  </Button>
+                </Form>
+              )}
+            </Formik>
           </Col>
         </Row>
       </Container>

@@ -15,20 +15,20 @@ function Techstack() {
   return (
     <Row style={{ justifyContent: 'center', paddingBottom: '50px' }}>
       <Col xs={4} md={2} className='tech-icons'>
-        <DiJavascript1 />
+        <DiJavascript1 className='techicons-img' />
       </Col>
       <Col xs={4} md={2} className='tech-icons'>
-        <DiReact />
+        <DiReact className='techicons-img' />
       </Col>
       <Col xs={4} md={2} className='tech-icons'>
-        <DiNodejs />
+        <DiNodejs className='techicons-img' />
       </Col>
 
       <Col xs={4} md={2} className='tech-icons'>
-        <DiMongodb />
+        <DiMongodb className='techicons-img' />
       </Col>
       <Col xs={4} md={2} className='tech-icons'>
-        <DiPython />
+        <DiPython className='techicons-img' />
       </Col>
     </Row>
   );
