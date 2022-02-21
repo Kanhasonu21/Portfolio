@@ -6,7 +6,10 @@ import * as Yup from 'yup';
 import profile from '../../Assets/profile.jpeg';
 import Tilt from 'react-parallax-tilt';
 import { database } from '../../config/firebase';
-import { collection,  addDoc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const schema = Yup.object().shape({
   name: Yup.string()
     .min(3, 'Too Short!')
@@ -17,6 +20,13 @@ const schema = Yup.object().shape({
 });
 function Home2() {
   const collectionRef = collection(database, 'portfolio-contact');
+  const notify = () =>
+    toast.success(`Thanks! I'll contact you soon!`, {
+      icon: '🚀',
+      theme: 'dark',
+      hideProgressBar: true,
+    });
+
   return (
     <Container fluid className='home-about-section' id='about'>
       <Container>
@@ -80,9 +90,12 @@ function Home2() {
               validationSchema={schema}
               onSubmit={async (values, actions) => {
                 try {
-                   await addDoc(collectionRef, values);
+                  await addDoc(collectionRef, values);
+                  notify();
                   actions.resetForm();
-                } catch (err) {}
+                } catch (err) {
+                  toast.error('Data not sent !!');
+                }
               }}
               initialValues={{
                 name: '',
@@ -98,6 +111,7 @@ function Home2() {
                 touched,
                 isValid,
                 errors,
+                status,
               }) => (
                 <Form className='contact' onSubmit={handleSubmit}>
                   <Row className='mb-3'>
@@ -156,6 +170,7 @@ function Home2() {
             </Formik>
           </Col>
         </Row>
+        <ToastContainer />
       </Container>
     </Container>
   );
