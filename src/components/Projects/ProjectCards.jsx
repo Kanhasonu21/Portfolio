@@ -20,7 +20,7 @@ function ProjectCards(props) {
           variant='secondary'
           href={props.projectLink}
           target='_blank'
-          style={{ marginLeft: '1rem' }}
+          style={{ margin: '1rem' }}
         >
           <BiLinkExternal /> &nbsp; GitHub
         </Button>

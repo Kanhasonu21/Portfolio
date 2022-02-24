@@ -7,11 +7,12 @@ import weather from '../../Assets/weather.png';
 import whatsappchat from '../../Assets/whatsappchat.png';
 import porfolio from '../../Assets/portfolio.png';
 
-import chatify from '../../Assets/Projects/chatify.png';
+// import Particles from '../Particle';
 
 function Projects() {
   return (
     <Container fluid className='project-section'>
+      {/* <Particles /> */}
       <Container>
         <h1 className='project-heading'>
           My Recent <strong className='purple'>Works </strong>
@@ -20,7 +21,7 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: 'center', paddingBottom: '10px' }}>
-          <Col md={4} className='project-card'>
+          <Col md={3} className='project-card'>
             <ProjectCard
               imgPath={whatsappchat}
               isBlog={false}
@@ -30,29 +31,27 @@ function Projects() {
               projectLink='https://github.com/Kanhasonu21/Whatsapp-Chat'
             />
           </Col>
-          <Col md={4} className='project-card'>
+          <Col md={3} className='project-card'>
             <ProjectCard
               imgPath={weather}
               isBlog={false}
               title='Weather'
-              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+              description='Get the weather report of your area by entering your location and it will give the temprature result. This app is built with React and Open Weather API.'
               link='https://kanhasonu21.github.io/'
               projectLink='https://github.com/Kanhasonu21/pwa-react/'
             />
           </Col>
-          <Col md={4} className='project-card'>
+          <Col md={3} className='project-card'>
             <ProjectCard
               imgPath={porfolio}
               isBlog={false}
               title='Portfolio'
-              description='This is repository for Data Structure and Algorithm.
-               This repo contains all important data structure topics like Array, Linked List, Tree, Recursion etc.
-               '
+              description='This repository contains the link for this portfolio website. This website is built with React, Bootstrap, Jetkins, GithHub API with mobile first approach.'
               projectLink='https://github.com/Kanhasonu21/Portfolio'
               link='https://kanhaiya-kumar.herokuapp.com/'
             />
           </Col>
-          <Col md={4} className='project-card'>
+          <Col md={3} className='project-card'>
             <ProjectCard
               imgPath={
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGuWbPApIZgU6kGrEAjV92aOtRKJ_RphDwIw&usqp=CAU'

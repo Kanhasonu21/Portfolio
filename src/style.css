@@ -510,8 +510,8 @@ html {
 .project-card {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
   height: auto !important;
 }
 
@@ -689,6 +689,12 @@ html {
   .resume-right {
     padding-right: 15px !important;
     padding-left: 15px !important;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 2560px) {
+  .home-content {
+    padding: 9rem 0 12rem !important;
   }
 }
 .resume .resume-title {
