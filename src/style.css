@@ -362,13 +362,13 @@ html {
   background: transparent !important;
   color: #fff !important ;
   outline: none;
-  border: 1px solid var(--imp-text-color) !important;
+  border: 0.2px solid var(--imp-text-color) !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   fill: none !important;
 }
 .form-control:focus {
-  border: 1px solid var(--imp-border-color) !important;
+  border: 0.2px solid var(--imp-border-color) !important;
 }
 .techicons-img {
   animation: bounce-2 3s infinite linear;
