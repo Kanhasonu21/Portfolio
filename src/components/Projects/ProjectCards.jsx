@@ -1,31 +1,51 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+
+import {  Row, Col,  } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import { BiLinkExternal } from 'react-icons/bi';
+import { AiOutlineLink } from 'react-icons/ai';
+import { FiExternalLink } from 'react-icons/fi';
 
 function ProjectCards(props) {
   return (
-    <Card className='project-card-view'>
-      <Card.Img variant='top' src={props.imgPath} alt='card-img' />
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: 'justify' }}>
-          {props.description}
-        </Card.Text>
-        <Button variant='primary' href={props.link} target='_blank'>
-          <BiLinkExternal /> &nbsp;
-          {props.isBlog ? 'View Blog' : 'View Project'}
-        </Button>
-        <Button
-          variant='secondary'
-          href={props.projectLink}
-          target='_blank'
-          style={{ margin: '1rem' }}
-        >
-          <BiLinkExternal /> &nbsp; GitHub
-        </Button>
-      </Card.Body>
-    </Card>
+    <>
+      <div className='project-title'>
+        <span>{props.title}</span>
+        <AiOutlineLink
+          className='link-icon'
+          onClick={(_) => (window.location = props.projectLink)}
+        />
+      </div>
+      <Row className='project-details'>
+        <Col md={4}>
+          <img
+            loading='lazy'
+            className='project-image'
+            src={props.imgPath}
+            alt={'images'}
+          />
+        </Col>
+        <Col md={8}>
+          <div className='project-info'>
+            <div className='project-description '>
+              <div>
+                <span>{props.description}</span>
+              </div>
+              <div style={{ marginTop: '1rem' }}>
+                <span>Tech Stack : </span>
+                {props.techStack.map((item, index) => (
+                  <span className='tech-stack'>{item}</span>
+                ))}
+              </div>
+              <div style={{ marginTop: '1rem' }}>
+                <Button onClick={(_) => (window.location = props.projectLink)}>
+                  Github <FiExternalLink />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </>
   );
 }
 export default ProjectCards;
