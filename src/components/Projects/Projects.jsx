@@ -20,8 +20,8 @@ function Projects() {
         <p style={{ color: 'white' }}>
           Here are a few projects I've worked on recently.
         </p>
-        <Row style={{ justifyContent: 'center', paddingBottom: '10px' }}>
-          <Col md={3} className='project-card'>
+        <Row>
+          <Col md={12} className='project-card'>
             <ProjectCard
               imgPath={whatsappchat}
               isBlog={false}
@@ -29,9 +29,10 @@ function Projects() {
               description='You can send messages to anyone  without saving the number on phone. It is a progressive web application (PWA) build with react'
               link='https://unknownwhatsapp.netlify.app/'
               projectLink='https://github.com/Kanhasonu21/Whatsapp-Chat'
+              techStack={['React', 'Redux', 'JavaScript', 'HTML5', 'CSS3']}
             />
           </Col>
-          <Col md={3} className='project-card'>
+          <Col md={12} className='project-card'>
             <ProjectCard
               imgPath={weather}
               isBlog={false}
@@ -39,9 +40,10 @@ function Projects() {
               description='Get the weather report of your area by entering your location and it will give the temprature result. This app is built with React and Open Weather API.'
               link='https://kanhasonu21.github.io/'
               projectLink='https://github.com/Kanhasonu21/pwa-react/'
+              techStack={['React', 'Redux', 'JavaScript', 'HTML5', 'CSS3']}
             />
           </Col>
-          <Col md={3} className='project-card'>
+          <Col md={12} className='project-card'>
             <ProjectCard
               imgPath={porfolio}
               isBlog={false}
@@ -49,9 +51,10 @@ function Projects() {
               description='This repository contains the link for this portfolio website. This website is built with React, Bootstrap, Jetkins, GithHub API with mobile first approach.'
               projectLink='https://github.com/Kanhasonu21/Portfolio'
               link='https://kanhaiya-kumar.herokuapp.com/'
+              techStack={['React', 'Redux', 'JavaScript', 'HTML5', 'CSS3']}
             />
           </Col>
-          <Col md={3} className='project-card'>
+          <Col md={12} className='project-card'>
             <ProjectCard
               imgPath={
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGuWbPApIZgU6kGrEAjV92aOtRKJ_RphDwIw&usqp=CAU'
@@ -60,6 +63,7 @@ function Projects() {
               title='Data Structure and Algorithm'
               description='This is repository for Data Structure and Algorithm. This repo contains all important data structure topics like Array, Linked List, Tree, Recursion etc.'
               projectLink='https://github.com/Kanhasonu21/DS-Algo'
+              techStack={['JavaScript', 'Python']}
             />
           </Col>
         </Row>

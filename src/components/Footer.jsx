@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
+import { AiFillGithub, AiOutlineTwitter, AiOutlineHeart } from 'react-icons/ai';
+import { CgCoffee } from 'react-icons/cg';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { SiBlogger } from 'react-icons/si';
 
@@ -9,7 +10,10 @@ function Footer() {
     <Container fluid className='footer'>
       <Row>
         <Col md='6' className='footer-copywright'>
-          <h3>Made with 💛 &nbsp;and ☕️ by Kanhaiya</h3>
+          <h3>
+            Made with <AiOutlineHeart /> &nbsp;and &nbsp; <CgCoffee /> &nbsp;by
+            Kanhaiya
+          </h3>
         </Col>
         {/* <Col md='4' className='footer-copywright'>
           <h3>Copyright © {year} KK</h3>
