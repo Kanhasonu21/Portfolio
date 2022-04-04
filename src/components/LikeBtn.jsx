@@ -20,7 +20,7 @@ function Like() {
         upadteBtn(false);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   }, []);
 
@@ -36,10 +36,10 @@ function Like() {
     axios
       .post(postUri)
       .then((res) => {
-        console.log(res.data.status);
+        // console.log(res.data.status);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
 
     setTimeout(() => {
