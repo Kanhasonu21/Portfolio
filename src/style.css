@@ -147,6 +147,9 @@ html {
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
+  .project-info {
+    margin-top: 1.5rem;
+  }
 }
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
@@ -514,16 +517,16 @@ html {
   display: flex;
   transition: border-color 1s ease;
 }
-
 .link-icon {
-  font-size: 1.4rem;
   margin: 0.6rem 0 0 0.6rem;
-  transition: 1s ease-out;
+  transition: 1s ease-in-out;
   cursor: pointer;
+  font-size: 1.1rem;
 }
+
 .link-icon:hover {
-  transform: translate(1.2);
-  transition: 1s ease-out;
+  font-size: 1.6rem;
+  transition: 1s ease-in-out;
 }
 
 .project-details {

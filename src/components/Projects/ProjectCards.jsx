@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {  Row, Col,  } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { AiOutlineLink } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
@@ -17,12 +17,7 @@ function ProjectCards(props) {
       </div>
       <Row className='project-details'>
         <Col md={4}>
-          <img
-            loading='lazy'
-            className='project-image'
-            src={props.imgPath}
-            alt={'images'}
-          />
+          <img className='project-image' src={props.imgPath} alt={'images'} />
         </Col>
         <Col md={8}>
           <div className='project-info'>
@@ -33,7 +28,9 @@ function ProjectCards(props) {
               <div style={{ marginTop: '1rem' }}>
                 <span>Tech Stack : </span>
                 {props.techStack.map((item, index) => (
-                  <span className='tech-stack'>{item}</span>
+                  <span className='tech-stack' key={index}>
+                    {item}
+                  </span>
                 ))}
               </div>
               <div style={{ marginTop: '1rem' }}>
