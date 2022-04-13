@@ -20,9 +20,9 @@ function App() {
     const timer = setTimeout(() => {
       upadateLoad(false);
     }, 1200);
-    document.addEventListener('contextmenu', (e) => {
-      e.preventDefault();
-    });
+    // document.addEventListener('contextmenu', (e) => {
+    //   e.preventDefault();
+    // });
     return () => clearTimeout(timer);
   }, []);
 

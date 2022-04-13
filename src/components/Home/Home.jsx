@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { SiHashnode } from 'react-icons/si';
 import homeLogo from '../../Assets/home-main.svg';
+import Github from '../About/Github';
 // import Particle from '../Particle';
 import Home2 from './Home2';
 import Type from './Type';
@@ -12,7 +15,7 @@ function Home() {
         {/* <Particle /> */}
         <Container className='home-content'>
           <Row>
-            <Col md={7} className='home-header'>
+            <Col md={12} className='home-header'>
               <h1 style={{ paddingBottom: 15 }} className='heading'>
                 Hi There!{' '}
                 <span className='wave' role='img' aria-labelledby='wave'>
@@ -24,19 +27,36 @@ function Home() {
                 I'M
                 <strong className='main-name'> Kanhaiya Kumar</strong>
               </h1>
+              <div className='social-container'>
+                <div className='social-icon'>
+                  <FaLinkedin />
+                </div>
+                <div className='social-icon'>
+                  <FaGithub />
+                </div>
+                <div className='social-icon'>
+                  <FaInstagram />
+                </div>
+                <div className='social-icon'>
+                  <SiHashnode />
+                </div>
+                <div className='social-icon'>
+                  <FaTwitter />
+                </div>
+              </div>
 
-              <div style={{ padding: 50, textAlign: 'left' }}>
+              <div style={{ padding: '20px 50px', textAlign: 'center' }}>
                 <Type />
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
+            {/* <Col md={5} style={{ paddingBottom: 20 }}>
               <img
                 src={homeLogo}
                 alt='home pic'
                 className='img-fluid image bounce-1'
               />
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </Container>

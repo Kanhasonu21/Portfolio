@@ -78,7 +78,7 @@ function Home2() {
               <img
                 src={profile}
                 className='rounded-circle shadow-4'
-                style={{ width: '80%', border: '2px solid #c770f0' }}
+                style={{ width: '80%', border: '2px solid #04581e' }}
                 alt='avatar'
               />
             </Tilt>
@@ -86,7 +86,8 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className='home-about-social'>
-            <h1>Get in Touch</h1>
+            <h1>What's Your Story !</h1>
+            <h3>Let's Connect</h3> <br />
             <Formik
               validationSchema={schema}
               onSubmit={async (values, actions) => {
@@ -117,7 +118,6 @@ function Home2() {
                 <Form className='contact' onSubmit={handleSubmit}>
                   <Row className='mb-3'>
                     <Form.Group as={Col}>
-                      <Form.Label>Name</Form.Label>
                       <Form.Control
                         type='text'
                         name='name'
@@ -132,7 +132,6 @@ function Home2() {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId='formGridPassword'>
-                      <Form.Label>Email</Form.Label>
                       <Form.Control
                         type='input'
                         name='email'
@@ -148,7 +147,6 @@ function Home2() {
                   </Row>
 
                   <Form.Group className='mb-3' controlId='formGridAddress1'>
-                    <Form.Label>Message</Form.Label>
                     <Form.Control
                       placeholder='Write a message'
                       as='textarea'
@@ -157,6 +155,7 @@ function Home2() {
                       onChange={handleChange}
                       name='message'
                       isInvalid={!!errors.message}
+                    
                     />
                     <Form.Control.Feedback type='invalid'>
                       {errors.message}

@@ -1,18 +1,13 @@
 html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
-
+  --section-background-color: #212b36;
   --image-gradient: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.678),
     rgba(12, 10, 22, 0.863)
   );
 
-  --imp-text-color: #c770f0;
-  --imp-border-color: #c7da28;
+  --imp-text-color: #0a9734;
+  --imp-border-color: #37720f;
 }
 
 .purple {
@@ -29,7 +24,7 @@ html {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #0c0513;
+  background-color: #000000;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -49,7 +44,7 @@ html {
 /* --------- */
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 2px;
 }
 
 /* Track */
@@ -59,7 +54,7 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: var(--imp-text-color);
   border-radius: 12px;
 }
 
@@ -257,18 +252,22 @@ html {
 
 .home-section {
   position: relative;
-  z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
-  background-position: top center;
+  /* z-index: -1; */
+  background-image: var(--image-gradient), url(./Assets/background.jpg);
+  /* background-position: top center; */
+  background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 30px !important;
-  padding-top: 30px !important;
+  padding-bottom: 90px !important;
+  padding-top: 70px !important;
+  height: 100%;
+  background-repeat: repeat;
+  z-index: 1;
 }
 
 .home-content {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
-  text-align: left;
+  text-align: center;
 }
 
 .heading {
@@ -287,12 +286,12 @@ html {
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: var(--imp-text-color) !important;
+  color: #fff !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: var(--imp-text-color) !important;
+  color: #ffffff !important;
 }
 
 @media (max-width: 767px) {
@@ -365,13 +364,16 @@ html {
   background: transparent !important;
   color: #fff !important ;
   outline: none;
-  border: 0.2px solid var(--imp-text-color) !important;
+  border: 0 !important;
+  border-bottom: 1px solid #fff !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   fill: none !important;
+  border-radius: 0 !important;
 }
 .form-control:focus {
-  border: 0.2px solid var(--imp-border-color) !important;
+  border: 0 !important;
+  border-bottom: 1px solid #fff !important;
 }
 .techicons-img {
   animation: bounce-2 3s infinite linear;
@@ -458,6 +460,31 @@ html {
   color: #700c86 !important;
 }
 
+.social-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.social-icon {
+  color: #000;
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 38px;
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.social-icon:hover {
+  height: 45px;
+  width: 45px;
+  line-height: 42px;
+  font-size: 22px;
+}
+
 /* --------- */
 /* Footer */
 /* --------- */
@@ -497,9 +524,6 @@ html {
   padding: 0 !important;
 }
 
-.blockquote-footer {
-  color: #a588c0 !important;
-}
 /* --------- */
 /* Projects */
 /* --------- */
@@ -829,16 +853,17 @@ html {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #934cce5e !important;
+  background-color: #04581e !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
+  border-color: #04581e !important;
 }
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #04581e !important;
+  border-color: #04581e !important;
 }
 .fork-btn-inner::after {
   display: none !important;
