@@ -116,8 +116,8 @@ function Home2() {
                 status,
               }) => (
                 <Form className='contact' onSubmit={handleSubmit}>
-                  <Row className='mb-3'>
-                    <Form.Group as={Col}>
+                  <Row className='mb-3' >
+                    <Form.Group as={Col} sm={6}>
                       <Form.Control
                         type='text'
                         name='name'
@@ -131,7 +131,7 @@ function Home2() {
                       </Form.Control.Feedback>
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId='formGridPassword'>
+                    <Form.Group as={Col} controlId='formGridPassword' sm={6}>
                       <Form.Control
                         type='input'
                         name='email'

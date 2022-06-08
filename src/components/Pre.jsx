@@ -1,6 +1,6 @@
-import React from "react";
-function Pre(props) {
-  return <div id={props.load ? "preloader" : "preloader-none"}></div>;
+import React from 'react';
+function Pre() {
+  return <div class='blob-loader'>Loading...</div>;
 }
 
 export default Pre;

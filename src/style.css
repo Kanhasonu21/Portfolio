@@ -478,12 +478,6 @@ html {
   cursor: pointer;
   transition: 0.5s ease;
 }
-.social-icon:hover {
-  height: 45px;
-  width: 45px;
-  line-height: 42px;
-  font-size: 22px;
-}
 
 /* --------- */
 /* Footer */
@@ -867,4 +861,41 @@ html {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+/* loader */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap');
+
+.blob-loader {
+  font-family: 'Pacifico', cursive;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  font-size: 30px;
+  color: #fff;
+}
+.blob-loader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #06821d content-box;
+  box-sizing: border-box;
+  border-top: 15px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
